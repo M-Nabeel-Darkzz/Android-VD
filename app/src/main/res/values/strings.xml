@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">OMDB_Client</string>
+    <string name="title_placeholder">Title</string>
+    <string name="ImdbID_placeholder">ImdbID</string>
+    <string name="ivIconDescription">Image comes here.</string>
+    <string name="title_recyclerview">Title: %s</string>
+    <string name="imdbID_recyclerview">ImdbID: %s</string>
+
+</resources>
