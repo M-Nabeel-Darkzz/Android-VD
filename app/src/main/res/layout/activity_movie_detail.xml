@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:contentDescription="@string/ivIconDescription"
-        android:layout_height="250dp"
+        android:layout_height="@dimen/ivLayoutHeight_movieDetailView_xxhdpi"
         android:id="@+id/ivMovieDetail"
         android:scaleType="fitXY"
         android:src="@drawable/android_placeholder"
@@ -23,8 +23,8 @@
         android:id="@+id/title_movieDetail"
         android:text="@string/title_placeholder"
         android:textAlignment="center"
-        android:textSize="30sp"
-        android:padding="14sp"
+        android:textSize="@dimen/tvTitle_textSize_movieDetailView_xxhdpi"
+        android:padding="@dimen/tvTitle_padding_movieDetailView_xxhdpi"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/ivMovieDetail"
         app:layout_constraintBottom_toTopOf="@id/imdbID_movieDetail"/>
@@ -34,8 +34,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/imdbID_movieDetail"
         android:textAlignment="center"
-        android:textSize="20sp"
-        android:padding="2dp"
+        android:textSize="@dimen/tvShortDescription_textSize_movieDetailView_xxhdpi"
+        android:padding="@dimen/tvShortDescription_padding_movieDetailView_xxhdpi"
         android:text="@string/ImdbID_placeholder"
         app:layout_constraintTop_toBottomOf="@id/title_movieDetail"
         app:layout_constraintBottom_toBottomOf="parent"/>
