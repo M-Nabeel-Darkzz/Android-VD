@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.example.omdb_client.R;
 import com.example.omdb_client.adapters.MovieAdapter;
@@ -42,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<MovieItem> call, Throwable t) {
-                Toast.makeText(MainActivity.this, t.toString(), Toast.LENGTH_LONG).show();
+                ToastUtil.toastLong(MainActivity.this, t.toString());
             }
         });
     }
