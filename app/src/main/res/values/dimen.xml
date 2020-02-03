@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="title_textSize_pix2">18sp</dimen>
-    <dimen name="shortDescription_textSize_pix2">16sp</dimen>
-    <dimen name="constraintLayout_padding_pix2">18dp</dimen>
+    // Dimensions for movie list items view activity
+    <dimen name="tvTitle_textSize_movieListItem_xxhdpi">18sp</dimen>
+    <dimen name="tvShortDescription_textSize_movieListItem_xxhdpi">16sp</dimen>
+    <dimen name="constraintLayout_padding_movieListItem_xxhdpi">18dp</dimen>
+    <dimen name="ivWidth_movieListItem_xxhdpi">45dp</dimen>
+    <dimen name="ivHeight_movieListItem_xxhdpi">45dp</dimen>
+    <dimen name="tvMarginStart_movieListItem_xxhdpi">10dp</dimen>
+
+    // Dimensions for movie detail view activity
+    <dimen name="ivLayoutHeight_movieDetailView_xxhdpi">250dp</dimen>
+    <dimen name="tvTitle_textSize_movieDetailView_xxhdpi">30sp</dimen>
+    <dimen name="tvTitle_padding_movieDetailView_xxhdpi">14dp</dimen>
+    <dimen name="tvShortDescription_textSize_movieDetailView_xxhdpi">20sp</dimen>
+    <dimen name="tvShortDescription_padding_movieDetailView_xxhdpi">2dp</dimen>
 
 </resources>
