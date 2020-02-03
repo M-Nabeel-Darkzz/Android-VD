@@ -42,8 +42,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MoviesViewHo
         Movie movieItem = movieListData.get(position);
         // setting the data
 
-        holder.title.setText(context.getString(R.string.title_recyclerview, movieItem.getTitle()));
-        holder.imdbId.setText(context.getString(R.string.imdbID_recyclerview, movieItem.getImdbId()));
+        holder.title.setText(context.getString(R.string.title_recyclerView, movieItem.getTitle()));
+        holder.imdbId.setText(context.getString(R.string.imdbID_recyclerView, movieItem.getImdbId()));
         Picasso.with(context).load(movieItem.getPoster()).placeholder(R.drawable.android_placeholder).into(holder.poster);
 
         // set onClickListener on itemView
@@ -71,6 +71,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MoviesViewHo
 
         private MoviesViewHolder(@NonNull View itemView) {
             super(itemView);
+
             // get the reference of items
             title = itemView.findViewById(R.id.title);
             imdbId = itemView.findViewById(R.id.shortDescription);
