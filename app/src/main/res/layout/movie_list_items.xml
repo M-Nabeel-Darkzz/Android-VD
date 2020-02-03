@@ -4,13 +4,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/constraintLayout_padding_pix2"
+    android:padding="@dimen/constraintLayout_padding_movieListItem_xxhdpi"
     >
 
     <ImageView
-        android:layout_width="45dp"
+        android:layout_width="@dimen/ivWidth_movieListItem_xxhdpi"
         android:contentDescription="@string/ivIconDescription"
-        android:layout_height="45dp"
+        android:layout_height="@dimen/ivHeight_movieListItem_xxhdpi"
         android:scaleType="centerCrop"
         android:id="@+id/ivMovieIcon"
         android:src="@drawable/android_placeholder"
@@ -23,8 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_placeholder"
-        android:textSize="@dimen/title_textSize_pix2"
-        android:layout_marginStart="10dp"
+        android:textSize="@dimen/tvTitle_textSize_movieListItem_xxhdpi"
+        android:layout_marginStart="@dimen/tvMarginStart_movieListItem_xxhdpi"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/shortDescription"
         app:layout_constraintStart_toEndOf="@id/ivMovieIcon"/>
@@ -33,8 +33,8 @@
         android:id="@+id/shortDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/shortDescription_textSize_pix2"
-        android:layout_marginStart="10dp"
+        android:textSize="@dimen/tvShortDescription_textSize_movieListItem_xxhdpi"
+        android:layout_marginStart="@dimen/tvMarginStart_movieListItem_xxhdpi"
         android:text="@string/ImdbID_placeholder"
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintStart_toEndOf="@id/ivMovieIcon"/>
