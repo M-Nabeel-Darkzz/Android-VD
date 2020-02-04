@@ -1,5 +1,6 @@
 package com.example.omdb_client.models;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -13,6 +14,7 @@ import java.io.Serializable;
 public class Movie implements Serializable {
 
     @PrimaryKey
+    @NonNull
     @SerializedName("imdbID")
     @ColumnInfo(name = "imdbID")
     private String imdbId;
@@ -22,6 +24,7 @@ public class Movie implements Serializable {
     private String title;
 
     @SerializedName("Poster")
+    @ColumnInfo(name = "poster")
     private String poster;
 
     public String getImdbId() {

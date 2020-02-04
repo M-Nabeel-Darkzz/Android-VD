@@ -11,6 +11,7 @@ import com.example.omdb_client.adapters.MovieAdapter;
 import com.example.omdb_client.apis.Api;
 import com.example.omdb_client.models.MovieItem;
 import com.example.omdb_client.models.Movie;
+import com.example.omdb_client.repositories.MovieRepository;
 import com.example.omdb_client.utilities.ToastUtil;
 
 import java.util.List;
@@ -22,13 +23,18 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
+    private MovieRepository repository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.recyclerView);
-        getMovieList();
+        repository = new MovieRepository(getApplication());
+        if (repository.getAllMovies().size() > 0) {
+            setDataInRecyclerView(repository.getAllMovies());
+        } else
+            getMovieList();
     }
 
     private void getMovieList(){
@@ -37,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<MovieItem> call, Response<MovieItem> response) {
                 setDataInRecyclerView(response.body().search);
+                repository.insert(response.body().search);
             }
 
             @Override
