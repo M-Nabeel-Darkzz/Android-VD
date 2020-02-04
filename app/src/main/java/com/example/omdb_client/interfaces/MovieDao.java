@@ -12,7 +12,7 @@ import java.util.List;
 @Dao
 public interface MovieDao {
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(List<Movie> movie);
 
     @Query("DELETE FROM movie_table")

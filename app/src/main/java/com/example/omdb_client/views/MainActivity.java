@@ -12,7 +12,6 @@ import com.example.omdb_client.apis.Api;
 import com.example.omdb_client.models.MovieItem;
 import com.example.omdb_client.models.Movie;
 import com.example.omdb_client.repositories.MovieRepository;
-import com.example.omdb_client.utilities.ToastUtil;
 
 import java.util.List;
 
@@ -31,10 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.recyclerView);
         repository = new MovieRepository(getApplication());
-        if (repository.getAllMovies().size() > 0) {
-            setDataInRecyclerView(repository.getAllMovies());
-        } else
-            getMovieList();
+        getMovieList();
     }
 
     private void getMovieList(){
@@ -43,12 +39,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<MovieItem> call, Response<MovieItem> response) {
                 setDataInRecyclerView(response.body().search);
+                repository.deleteAll();
                 repository.insert(response.body().search);
             }
 
             @Override
             public void onFailure(Call<MovieItem> call, Throwable t) {
-                ToastUtil.toastLong(MainActivity.this, t.toString());
+
+                setDataInRecyclerView(repository.getAllMovies());
             }
         });
     }

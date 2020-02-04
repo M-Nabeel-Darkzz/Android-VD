@@ -23,6 +23,8 @@ public class MovieRepository {
         return mAllMovies;
     }
 
+    public void deleteAll() { mMovieDao.deleteAll(); }
+
     public void insert(List<Movie> movie) {
         mMovieDao.insert(movie);
     }
