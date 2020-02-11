@@ -35,7 +35,7 @@ public class MovieRepository {
                 callback.onData(response.body().search);
                 movieData = response.body().search;
                 deleteAll();
-                insert(response.body().search);
+                insert(movieData);
             }
 
             @Override

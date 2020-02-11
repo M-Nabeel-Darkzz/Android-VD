@@ -8,7 +8,7 @@ import retrofit2.http.GET;
 
 public interface ApiInterface {
 
-    @GET("/?s=war&apikey=")
+    @GET("/?s=doom&apikey=767d3a1")
     Call<MovieItem> search();
 
 }
